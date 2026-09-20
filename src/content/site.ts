@@ -41,7 +41,7 @@ type Service = {
 
 type SectionHeading = {
   label: string;
-  title: [string, string];
+  title: string[];
   aside?: string;
 };
 
@@ -58,14 +58,12 @@ export interface Content {
     closeMenu: string;
     goHome: string;
     switchLang: string; // etiqueta del botón que cambia al OTRO idioma
-    stars: string;
   };
   stats: string[];
   sections: {
     services: SectionHeading;
     work: SectionHeading;
     experience: SectionHeading;
-    testimonials: SectionHeading;
   };
   services: Service[];
   about: {
@@ -73,12 +71,9 @@ export interface Content {
     title: [string, string];
     statement: string;
     closing: string;
-    rating: string;
-    trusted: string;
   };
   projects: Project[];
   experience: { role: string; company: string; period: string }[];
-  testimonials: { quote: string; author: string; role: string }[];
   contact: {
     label: string;
     title: [string, string];
@@ -148,20 +143,23 @@ const es: Content = {
     closeMenu: "Cerrar menú",
     goHome: "Ir al inicio",
     switchLang: "EN",
-    stars: "5 estrellas",
   },
   stats: [
     "5+ años de experiencia",
-    "40+ proyectos entregados",
-    "20+ clientes satisfechos",
     "100% enfoque en resultados",
-    "Next.js · Webflow · Shopify",
-    "Automatización con IA",
+    "n8n",
+    "Agentes de automatización con IA",
+    "Diseño",
+    "Desarrollo",
+    "IA",
+    "Vercel",
+    "Claude",
+    "Next.js · Webflow",
   ],
   sections: {
     services: {
       label: "Servicios",
-      title: ["Lo que", "hago"],
+      title: ["Lo que hago"],
       aside:
         "Diseño, desarrollo y automatizo productos digitales que ayudan a los negocios a vender más y operar mejor.",
     },
@@ -175,10 +173,6 @@ const es: Content = {
       label: "Trayectoria",
       title: ["Mi", "experiencia"],
       aside: "Los equipos y proyectos donde he dejado huella a lo largo de los años.",
-    },
-    testimonials: {
-      label: "Testimonios",
-      title: ["Lo que dicen", "mis clientes"],
     },
   },
   services: [
@@ -222,14 +216,6 @@ const es: Content = {
         "Implemento CRMs y embudos automatizados que nutren, segmentan y convierten. Cada paso se mide y se optimiza.",
       tags: ["HubSpot", "GoHighLevel", "Email marketing", "SEO"],
     },
-    {
-      number: "06",
-      kicker: "Acompañamiento",
-      title: "Consultoría",
-      description:
-        "Diagnóstico, hoja de ruta y acompañamiento para equipos que quieren adoptar tecnología e IA con criterio.",
-      tags: ["Estrategia digital", "Auditorías", "Workshops"],
-    },
   ],
   about: {
     label: "Sobre mí",
@@ -237,8 +223,6 @@ const es: Content = {
     statement:
       "Diseñador. Desarrollador. Constructor. Resuelvo problemas de negocio con diseño, código e inteligencia artificial. Combino visión de producto con ejecución técnica para que cada cosa que construyo genere resultados medibles desde la primera semana.",
     closing: "Menos ruido, más resultados.",
-    rating: "4.9",
-    trusted: "Clientes confían en mi trabajo",
   },
   projects: [
     {
@@ -249,11 +233,11 @@ const es: Content = {
         "Plataforma para aprender español con historias cortas nivel A1: videos, guías de estudio descargables y un juego interactivo.",
     },
     {
-      ...projectBase.tropicert,
-      title: "TropiCert",
-      category: "Plataforma · Next.js",
+      ...projectBase.lawwork,
+      title: "LawWork",
+      category: "Sitio web · Webflow",
       description:
-        "Organismo de certificación agropecuaria. Sitio corporativo con portal de operadores, documentos y solicitud de certificación en línea.",
+        "Firma de abogados especialistas en derecho corporativo. Sitio editorial con blog y catálogo de servicios legales.",
     },
     {
       ...projectBase.cdaSumapaz,
@@ -263,18 +247,18 @@ const es: Content = {
         "Centro de diagnóstico automotor en Fusagasugá. Agenda de turnos en línea, contacto por WhatsApp y blog optimizado para búsquedas locales.",
     },
     {
-      ...projectBase.lawwork,
-      title: "LawWork",
-      category: "Sitio web · Webflow",
-      description:
-        "Firma de abogados especialistas en derecho corporativo. Sitio editorial con blog y catálogo de servicios legales.",
-    },
-    {
       ...projectBase.grandRiver,
       title: "Grand River Clothing",
       category: "E-commerce · Shopify",
       description:
         "Tienda en línea de jeans para hombre y mujer en Estados Unidos, con colecciones, reseñas y programa de descuentos.",
+    },
+    {
+      ...projectBase.tropicert,
+      title: "TropiCert",
+      category: "Plataforma · Next.js",
+      description:
+        "Organismo de certificación agropecuaria. Sitio corporativo con portal de operadores, documentos y solicitud de certificación en línea.",
     },
     {
       ...projectBase.passGallery,
@@ -289,30 +273,6 @@ const es: Content = {
     { role: "Desarrollador web", company: "Freelance", period: "2020 – 2022" },
     { role: "Marketing digital", company: "Agencia local", period: "2019 – 2020" },
   ],
-  testimonials: [
-    {
-      quote:
-        "Jeisson entendió el negocio en la primera llamada. El sitio quedó rápido, claro y empezó a traer clientes desde el primer mes.",
-      author: "María González",
-      role: "CEO, empresa de servicios",
-    },
-    {
-      quote:
-        "Automatizó procesos que llevábamos años haciendo a mano. Ahora el equipo se dedica a vender, no a copiar datos.",
-      author: "Carlos Restrepo",
-      role: "Director de Operaciones",
-    },
-    {
-      quote: "Rápido, claro y con criterio. Nos ayudó a lanzar el producto en semanas, no meses.",
-      author: "Laura Méndez",
-      role: "Cofundadora, startup",
-    },
-    {
-      quote: "La tienda quedó funcionando perfecto y las ventas subieron. Muy recomendado.",
-      author: "Andrés Pérez",
-      role: "Gerente Comercial",
-    },
-  ],
   contact: {
     label: "Contacto",
     title: ["Hablemos", "de tu proyecto"],
@@ -320,7 +280,7 @@ const es: Content = {
       "¿Tienes una idea, un sitio que necesita mejorar o un proceso que quieres automatizar? Escríbeme y lo revisamos juntos.",
     copyEmail: "Copiar email",
     copied: "¡Copiado!",
-    linkedin: "Escribir por LinkedIn",
+    linkedin: "LinkedIn",
   },
 };
 
@@ -347,20 +307,23 @@ const en: Content = {
     closeMenu: "Close menu",
     goHome: "Go to top",
     switchLang: "ES",
-    stars: "5 stars",
   },
   stats: [
     "5+ years of experience",
-    "40+ projects delivered",
-    "20+ happy clients",
     "100% focused on results",
-    "Next.js · Webflow · Shopify",
-    "AI automation",
+    "n8n",
+    "AI automation agents",
+    "Design",
+    "Development",
+    "AI",
+    "Vercel",
+    "Claude",
+    "Next.js · Webflow",
   ],
   sections: {
     services: {
       label: "Services",
-      title: ["What I", "do"],
+      title: ["What I do"],
       aside:
         "I design, build and automate digital products that help businesses sell more and run smoother.",
     },
@@ -374,10 +337,6 @@ const en: Content = {
       label: "Career",
       title: ["My", "experience"],
       aside: "The teams and projects where I've made an impact over the years.",
-    },
-    testimonials: {
-      label: "Testimonials",
-      title: ["What clients", "say"],
     },
   },
   services: [
@@ -421,14 +380,6 @@ const en: Content = {
         "I implement CRMs and automated funnels that nurture, segment and convert. Every step is measured and optimized.",
       tags: ["HubSpot", "GoHighLevel", "Email marketing", "SEO"],
     },
-    {
-      number: "06",
-      kicker: "Guidance",
-      title: "Consulting",
-      description:
-        "Assessment, roadmap and hands-on support for teams that want to adopt technology and AI with good judgment.",
-      tags: ["Digital strategy", "Audits", "Workshops"],
-    },
   ],
   about: {
     label: "About me",
@@ -436,8 +387,6 @@ const en: Content = {
     statement:
       "Designer. Developer. Builder. I solve business problems with design, code and artificial intelligence. I combine product vision with technical execution so that everything I build delivers measurable results from week one.",
     closing: "Less noise, more results.",
-    rating: "4.9",
-    trusted: "Clients trust my work",
   },
   projects: [
     {
@@ -448,11 +397,11 @@ const en: Content = {
         "A platform to learn Spanish through short A1-level stories: videos, downloadable study guides and an interactive game.",
     },
     {
-      ...projectBase.tropicert,
-      title: "TropiCert",
-      category: "Platform · Next.js",
+      ...projectBase.lawwork,
+      title: "LawWork",
+      category: "Website · Webflow",
       description:
-        "Agricultural certification body. Corporate site with an operators portal, document center and online certification requests.",
+        "Corporate law firm. Editorial website with a blog and a catalog of legal services.",
     },
     {
       ...projectBase.cdaSumapaz,
@@ -462,18 +411,18 @@ const en: Content = {
         "Vehicle inspection center in Fusagasugá. Online appointment booking, WhatsApp contact and a blog optimized for local search.",
     },
     {
-      ...projectBase.lawwork,
-      title: "LawWork",
-      category: "Website · Webflow",
-      description:
-        "Corporate law firm. Editorial website with a blog and a catalog of legal services.",
-    },
-    {
       ...projectBase.grandRiver,
       title: "Grand River Clothing",
       category: "E-commerce · Shopify",
       description:
         "Online store for men's and women's jeans in the United States, with collections, reviews and a discount program.",
+    },
+    {
+      ...projectBase.tropicert,
+      title: "TropiCert",
+      category: "Platform · Next.js",
+      description:
+        "Agricultural certification body. Corporate site with an operators portal, document center and online certification requests.",
     },
     {
       ...projectBase.passGallery,
@@ -488,30 +437,6 @@ const en: Content = {
     { role: "Web Developer", company: "Freelance", period: "2020 – 2022" },
     { role: "Digital Marketing", company: "Local agency", period: "2019 – 2020" },
   ],
-  testimonials: [
-    {
-      quote:
-        "Jeisson understood the business on the first call. The site is fast, clear, and started bringing in clients within the first month.",
-      author: "María González",
-      role: "CEO, services company",
-    },
-    {
-      quote:
-        "He automated processes we had been doing by hand for years. Now the team focuses on selling, not copying data.",
-      author: "Carlos Restrepo",
-      role: "Operations Director",
-    },
-    {
-      quote: "Fast, clear and thoughtful. He helped us launch the product in weeks, not months.",
-      author: "Laura Méndez",
-      role: "Co-founder, startup",
-    },
-    {
-      quote: "The store works perfectly and sales went up. Highly recommended.",
-      author: "Andrés Pérez",
-      role: "Sales Manager",
-    },
-  ],
   contact: {
     label: "Contact",
     title: ["Let's talk", "about your project"],
@@ -519,7 +444,7 @@ const en: Content = {
       "Have an idea, a site that needs work, or a process you want to automate? Send me a message and let's look at it together.",
     copyEmail: "Copy email",
     copied: "Copied!",
-    linkedin: "Message on LinkedIn",
+    linkedin: "LinkedIn",
   },
 };
 

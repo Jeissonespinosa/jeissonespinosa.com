@@ -7,7 +7,6 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Work from "@/components/Work";
 import Experience from "@/components/Experience";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -24,7 +23,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <About site={site} />
         <Work site={site} />
         <Experience site={site} />
-        <Testimonials site={site} />
       </main>
       <Contact site={site} />
     </>

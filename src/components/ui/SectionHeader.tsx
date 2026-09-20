@@ -1,5 +1,6 @@
 /**
- * Encabezado de sección: etiqueta pequeña + título grande en dos líneas.
+ * Encabezado de sección: etiqueta pequeña + título grande.
+ * `title` acepta una o varias líneas; a partir de la segunda se muestran en gris.
  */
 export default function SectionHeader({
   label,
@@ -7,7 +8,7 @@ export default function SectionHeader({
   aside,
 }: {
   label: string;
-  title: readonly [string, string];
+  title: readonly string[];
   aside?: string;
 }) {
   return (
@@ -18,8 +19,8 @@ export default function SectionHeader({
         </span>
         <h2 className="display mt-6 text-[clamp(2.8rem,7.5vw,7.5rem)]">
           {title.map((line, i) => (
-            <span key={line} className="block" data-reveal>
-              {i === 1 ? <span className="text-muted">{line}</span> : line}
+            <span key={line} className="block whitespace-nowrap" data-reveal>
+              {i >= 1 ? <span className="text-muted">{line}</span> : line}
             </span>
           ))}
         </h2>

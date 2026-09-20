@@ -4,8 +4,16 @@ import { useState } from "react";
 import type { Site } from "@/content/site";
 import { Button, ButtonLink } from "./ui/Button";
 
-/** Los CTAs que se repiten en el sitio: copiar email y escribir por LinkedIn. */
-export default function ContactActions({ site, large = false }: { site: Site; large?: boolean }) {
+/** CTAs de contacto: copiar email (opcional) y LinkedIn. */
+export default function ContactActions({
+  site,
+  large = false,
+  showEmail = true,
+}: {
+  site: Site;
+  large?: boolean;
+  showEmail?: boolean;
+}) {
   const [copied, setCopied] = useState(false);
   const linkedin = site.socials.find((s) => s.label === "LinkedIn");
 
@@ -23,15 +31,17 @@ export default function ContactActions({ site, large = false }: { site: Site; la
 
   return (
     <>
-      <Button onClick={copy} className={size} aria-live="polite">
-        {copied ? site.contact.copied : site.contact.copyEmail}
-      </Button>
+      {showEmail && (
+        <Button onClick={copy} className={size} aria-live="polite">
+          {copied ? site.contact.copied : site.contact.copyEmail}
+        </Button>
+      )}
       {linkedin && (
         <ButtonLink
           href={linkedin.href}
           target="_blank"
           rel="noreferrer"
-          variant="outline"
+          variant={showEmail ? "outline" : "solid"}
           className={size}
         >
           {site.contact.linkedin}
