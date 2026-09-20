@@ -60,7 +60,7 @@ export default function Hero({ site }: { site: Site }) {
     <section
       ref={root}
       id="inicio"
-      className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pb-8 pt-28 md:px-10 md:pt-32"
+      className="relative flex min-h-svh flex-col justify-between overflow-hidden px-6 pb-24 pt-28 md:px-10 md:pb-8 md:pt-32"
     >
       {/* Fondo */}
       <div

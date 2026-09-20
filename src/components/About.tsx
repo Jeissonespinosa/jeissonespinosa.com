@@ -16,9 +16,6 @@ export default function About({ site }: { site: Site }) {
               text={site.about.statement}
               className="text-[clamp(1.4rem,2.8vw,2.6rem)] font-medium leading-[1.25] tracking-tight"
             />
-            <p className="mt-8 text-lg text-accent" data-reveal>
-              {site.about.closing}
-            </p>
 
             <div className="mt-12 flex flex-wrap items-center gap-4" data-reveal>
               <ContactActions site={site} showEmail={false} />

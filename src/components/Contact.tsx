@@ -35,7 +35,7 @@ export default function Contact({ site }: { site: Site }) {
         </div>
       </div>
 
-      <div className="mt-28 flex flex-wrap items-end justify-between gap-8 border-t border-line py-8 text-xs uppercase tracking-[0.18em] text-muted">
+      <div className="mt-28 flex flex-wrap items-end justify-between gap-8 border-t border-line pb-28 pt-8 text-xs uppercase tracking-[0.18em] text-muted md:pb-8">
         <div className="flex flex-col gap-1">
           <span className="text-fg">{site.name}</span>
           <span>

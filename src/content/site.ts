@@ -58,6 +58,8 @@ export interface Content {
     closeMenu: string;
     goHome: string;
     switchLang: string; // etiqueta del botón que cambia al OTRO idioma
+    menu: string;
+    close: string;
   };
   stats: string[];
   sections: {
@@ -70,7 +72,6 @@ export interface Content {
     label: string;
     title: [string, string];
     statement: string;
-    closing: string;
   };
   projects: Project[];
   experience: { role: string; company: string; period: string }[];
@@ -143,6 +144,8 @@ const es: Content = {
     closeMenu: "Cerrar menú",
     goHome: "Ir al inicio",
     switchLang: "EN",
+    menu: "Menú",
+    close: "Cerrar",
   },
   stats: [
     "5+ años de experiencia",
@@ -222,7 +225,6 @@ const es: Content = {
     title: ["Tecnología", "con criterio"],
     statement:
       "Diseñador. Desarrollador. Constructor. Resuelvo problemas de negocio con diseño, código e inteligencia artificial. Combino visión de producto con ejecución técnica para que cada cosa que construyo genere resultados medibles desde la primera semana.",
-    closing: "Menos ruido, más resultados.",
   },
   projects: [
     {
@@ -307,6 +309,8 @@ const en: Content = {
     closeMenu: "Close menu",
     goHome: "Go to top",
     switchLang: "ES",
+    menu: "Menu",
+    close: "Close",
   },
   stats: [
     "5+ years of experience",
@@ -386,7 +390,6 @@ const en: Content = {
     title: ["Technology", "with judgment"],
     statement:
       "Designer. Developer. Builder. I solve business problems with design, code and artificial intelligence. I combine product vision with technical execution so that everything I build delivers measurable results from week one.",
-    closing: "Less noise, more results.",
   },
   projects: [
     {
