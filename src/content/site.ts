@@ -271,20 +271,11 @@ const es: Content = {
     {
       role: "Business Automation Specialist IA",
       company: "Pass Gallery",
-      period: "Mar 2026 – Actualidad",
+      period: "Mar 2026 – Sep 2026",
       location: "Orlando, Florida · Remoto",
       description:
         "Lidero la transformación hacia la eficiencia operativa diseñando y desplegando ecosistemas de automatización: elimino tareas repetitivas y potencio la adquisición de leads.",
       tags: ["n8n", "IA agéntica", "Automatización"],
-    },
-    {
-      role: "Trader independiente",
-      company: "Mercados financieros",
-      period: "2018 – Actualidad",
-      location: "Remoto",
-      description:
-        "Cerca de 8 años operando en mercados financieros con análisis técnico, gestión de riesgo y estrategias definidas. Disciplina y decisiones basadas en datos.",
-      tags: ["Análisis técnico", "Gestión de riesgo", "Futuros"],
     },
     {
       role: "Lead Developer",
@@ -296,13 +287,13 @@ const es: Content = {
       tags: ["Webflow", "Diseño web", "Marketing"],
     },
     {
-      role: "Day Trader",
-      company: "UProfit",
-      period: "Oct 2024 – Mar 2026",
-      location: "Estados Unidos · Remoto",
+      role: "Trader independiente",
+      company: "Mercados financieros",
+      period: "2018 – Actualidad",
+      location: "Remoto",
       description:
-        "Gestión de capital de riesgo operando futuros del S&P 500 con una estrategia específica y análisis técnico de la manipulación de precios.",
-      tags: ["Futuros S&P 500", "Análisis técnico", "Gestión de riesgo"],
+        "Cerca de 8 años operando en mercados financieros con análisis técnico, gestión de riesgo y estrategias definidas. Disciplina y decisiones basadas en datos.",
+      tags: ["Análisis técnico", "Gestión de riesgo", "Futuros"],
     },
     {
       role: "Lead Developer",
@@ -495,20 +486,11 @@ const en: Content = {
     {
       role: "Business Automation Specialist AI",
       company: "Pass Gallery",
-      period: "Mar 2026 – Present",
+      period: "Mar 2026 – Sep 2026",
       location: "Orlando, Florida · Remote",
       description:
         "I lead the shift toward operational efficiency by designing and deploying automation ecosystems: removing repetitive tasks and boosting lead acquisition.",
       tags: ["n8n", "Agentic AI", "Automation"],
-    },
-    {
-      role: "Independent Trader",
-      company: "Financial markets",
-      period: "2018 – Present",
-      location: "Remote",
-      description:
-        "About 8 years trading financial markets with technical analysis, risk management and defined strategies. Discipline and data-driven decisions.",
-      tags: ["Technical analysis", "Risk management", "Futures"],
     },
     {
       role: "Lead Developer",
@@ -520,13 +502,13 @@ const en: Content = {
       tags: ["Webflow", "Web design", "Marketing"],
     },
     {
-      role: "Day Trader",
-      company: "UProfit",
-      period: "Oct 2024 – Mar 2026",
-      location: "United States · Remote",
+      role: "Independent Trader",
+      company: "Financial markets",
+      period: "2018 – Present",
+      location: "Remote",
       description:
-        "Managed risk capital trading S&P 500 futures with a specific strategy and technical analysis of price manipulation.",
-      tags: ["S&P 500 futures", "Technical analysis", "Risk management"],
+        "About 8 years trading financial markets with technical analysis, risk management and defined strategies. Discipline and data-driven decisions.",
+      tags: ["Technical analysis", "Risk management", "Futures"],
     },
     {
       role: "Lead Developer",
