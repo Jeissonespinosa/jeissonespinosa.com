@@ -74,7 +74,14 @@ export interface Content {
     statement: string;
   };
   projects: Project[];
-  experience: { role: string; company: string; period: string }[];
+  experience: {
+    role: string;
+    company: string;
+    period: string;
+    location: string;
+    description: string;
+    tags: string[];
+  }[];
   contact: {
     label: string;
     title: [string, string];
@@ -175,25 +182,31 @@ const es: Content = {
     experience: {
       label: "Trayectoria",
       title: ["Mi", "experiencia"],
-      aside: "Los equipos y proyectos donde he dejado huella a lo largo de los años.",
+      aside: "Automatización, desarrollo web, producto, datos y cerca de 8 años en los mercados financieros.",
     },
   },
   services: [
     {
       number: "01",
+      kicker: "Alto impacto",
+      title: "IA y automatización",
+      description:
+        "Agentes y flujos automatizados que atienden clientes, califican leads, generan contenido y eliminan trabajo manual repetitivo dentro de tu operación.",
+      tags: [
+        "Claude Code",
+        "Software de automatización",
+        "Automatización de procesos",
+        "Automatización de contenido creativo",
+        "Automatización de atención al cliente",
+      ],
+    },
+    {
+      number: "02",
       kicker: "Presencia digital",
       title: "Diseño y desarrollo web",
       description:
         "Sitios rápidos, con animaciones cuidadas y optimizados para SEO y conversión. Diseñados para representar tu marca y convertir visitas en clientes.",
-      tags: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Vercel"],
-    },
-    {
-      number: "02",
-      kicker: "Del concepto al mercado",
-      title: "Diseño de producto",
-      description:
-        "Llevo ideas de concepto a producto: alcance, flujos, wireframes y prototipos alineados con lo que los usuarios realmente necesitan.",
-      tags: ["Figma", "UX/UI", "MVP", "Prototipado", "Design systems"],
+      tags: ["Claude Code", "Node.js", "Tailwind", "GSAP", "API", "Integración de software"],
     },
     {
       number: "03",
@@ -201,23 +214,7 @@ const es: Content = {
       title: "E-commerce",
       description:
         "Tiendas en línea que venden: catálogo, checkout, integraciones de pago y envío, y optimización continua de la conversión.",
-      tags: ["Shopify", "Webflow", "Pasarelas de pago", "Analítica"],
-    },
-    {
-      number: "04",
-      kicker: "Alto impacto",
-      title: "IA y automatización",
-      description:
-        "Agentes y flujos automatizados que atienden clientes, califican leads y eliminan trabajo manual repetitivo dentro de tu operación.",
-      tags: ["Claude", "OpenAI", "n8n", "Make", "APIs"],
-    },
-    {
-      number: "05",
-      kicker: "Ventas y marketing",
-      title: "CRM y embudos",
-      description:
-        "Implemento CRMs y embudos automatizados que nutren, segmentan y convierten. Cada paso se mide y se optimiza.",
-      tags: ["HubSpot", "GoHighLevel", "Email marketing", "SEO"],
+      tags: ["Webflow", "Claude Code", "Pasarelas de pago", "Analítica", "A/B testing"],
     },
   ],
   about: {
@@ -271,9 +268,78 @@ const es: Content = {
     },
   ],
   experience: [
-    { role: "Diseñador de producto & Desarrollador web", company: "Freelance", period: "2022 – Actualidad" },
-    { role: "Desarrollador web", company: "Freelance", period: "2020 – 2022" },
-    { role: "Marketing digital", company: "Agencia local", period: "2019 – 2020" },
+    {
+      role: "Business Automation Specialist IA",
+      company: "Pass Gallery",
+      period: "Mar 2026 – Actualidad",
+      location: "Orlando, Florida · Remoto",
+      description:
+        "Lidero la transformación hacia la eficiencia operativa diseñando y desplegando ecosistemas de automatización: elimino tareas repetitivas y potencio la adquisición de leads.",
+      tags: ["n8n", "IA agéntica", "Automatización"],
+    },
+    {
+      role: "Trader independiente",
+      company: "Mercados financieros",
+      period: "2018 – Actualidad",
+      location: "Remoto",
+      description:
+        "Cerca de 8 años operando en mercados financieros con análisis técnico, gestión de riesgo y estrategias definidas. Disciplina y decisiones basadas en datos.",
+      tags: ["Análisis técnico", "Gestión de riesgo", "Futuros"],
+    },
+    {
+      role: "Lead Developer",
+      company: "Pass Gallery",
+      period: "May 2023 – Abr 2026",
+      location: "Orlando, Florida · Remoto",
+      description:
+        "Desarrollo de la nueva versión del sitio de Pass Gallery en Webflow: galerías, tienda en línea y plataforma de marketing.",
+      tags: ["Webflow", "Diseño web", "Marketing"],
+    },
+    {
+      role: "Day Trader",
+      company: "UProfit",
+      period: "Oct 2024 – Mar 2026",
+      location: "Estados Unidos · Remoto",
+      description:
+        "Gestión de capital de riesgo operando futuros del S&P 500 con una estrategia específica y análisis técnico de la manipulación de precios.",
+      tags: ["Futuros S&P 500", "Análisis técnico", "Gestión de riesgo"],
+    },
+    {
+      role: "Lead Developer",
+      company: "Felix Media",
+      period: "Ago 2023 – Jul 2024",
+      location: "Estados Unidos · Remoto",
+      description:
+        "Desarrollo del sitio y la plataforma de Felix Media, agencia de marketing para e-commerce con IA.",
+      tags: ["Webflow", "Shopify", "E-commerce"],
+    },
+    {
+      role: "Product Manager Jr",
+      company: "Help",
+      period: "Oct 2022 – Nov 2023",
+      location: "México · Remoto",
+      description:
+        "Despliegue del producto con servicios de AWS (S3, Route 53, CloudFront) y desarrollo de frontend dentro del equipo de tecnología.",
+      tags: ["Diseño de interfaz", "AWS", "Frontend"],
+    },
+    {
+      role: "Data Analyst",
+      company: "OMD Colombia",
+      period: "Jun 2022 – Ago 2022",
+      location: "Bogotá, Colombia",
+      description:
+        "Reporte semanal unificando Facebook Ads, Google Ads, Campaign Manager y DV360, y limpieza de bases de datos para el estudio de campañas.",
+      tags: ["Excel", "Paid media", "Reportes"],
+    },
+    {
+      role: "Data Analyst Jr",
+      company: "Autolab",
+      period: "Sep 2021 – Mar 2022",
+      location: "Colombia",
+      description:
+        "Ejecución de sprints, A/B testing para optimizar la conversión de remarketing vía WhatsApp y dashboards en Google Data Studio para distintos equipos.",
+      tags: ["A/B testing", "Google Data Studio", "Sprints"],
+    },
   ],
   contact: {
     label: "Contacto",
@@ -340,25 +406,31 @@ const en: Content = {
     experience: {
       label: "Career",
       title: ["My", "experience"],
-      aside: "The teams and projects where I've made an impact over the years.",
+      aside: "Automation, web development, product, data and about 8 years in the financial markets.",
     },
   },
   services: [
     {
       number: "01",
+      kicker: "High impact",
+      title: "AI & automation",
+      description:
+        "Agents and automated workflows that serve customers, qualify leads, generate content and remove repetitive manual work from your operation.",
+      tags: [
+        "Claude Code",
+        "Automation software",
+        "Process automation",
+        "Creative content automation",
+        "Customer service automation",
+      ],
+    },
+    {
+      number: "02",
       kicker: "Digital presence",
       title: "Web design & development",
       description:
         "Fast websites with polished animations, optimized for SEO and conversion. Built to represent your brand and turn visitors into clients.",
-      tags: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Vercel"],
-    },
-    {
-      number: "02",
-      kicker: "From concept to market",
-      title: "Product design",
-      description:
-        "I take ideas from concept to product: scope, flows, wireframes and prototypes aligned with what users actually need.",
-      tags: ["Figma", "UX/UI", "MVP", "Prototyping", "Design systems"],
+      tags: ["Claude Code", "Node.js", "Tailwind", "GSAP", "API", "Software integration"],
     },
     {
       number: "03",
@@ -366,23 +438,7 @@ const en: Content = {
       title: "E-commerce",
       description:
         "Online stores that sell: catalog, checkout, payment and shipping integrations, and continuous conversion optimization.",
-      tags: ["Shopify", "Webflow", "Payment gateways", "Analytics"],
-    },
-    {
-      number: "04",
-      kicker: "High impact",
-      title: "AI & automation",
-      description:
-        "Agents and automated workflows that serve customers, qualify leads and remove repetitive manual work from your operation.",
-      tags: ["Claude", "OpenAI", "n8n", "Make", "APIs"],
-    },
-    {
-      number: "05",
-      kicker: "Sales & marketing",
-      title: "CRM & funnels",
-      description:
-        "I implement CRMs and automated funnels that nurture, segment and convert. Every step is measured and optimized.",
-      tags: ["HubSpot", "GoHighLevel", "Email marketing", "SEO"],
+      tags: ["Webflow", "Claude Code", "Payment gateways", "Analytics", "A/B testing"],
     },
   ],
   about: {
@@ -436,9 +492,78 @@ const en: Content = {
     },
   ],
   experience: [
-    { role: "Product Designer & Web Developer", company: "Freelance", period: "2022 – Present" },
-    { role: "Web Developer", company: "Freelance", period: "2020 – 2022" },
-    { role: "Digital Marketing", company: "Local agency", period: "2019 – 2020" },
+    {
+      role: "Business Automation Specialist AI",
+      company: "Pass Gallery",
+      period: "Mar 2026 – Present",
+      location: "Orlando, Florida · Remote",
+      description:
+        "I lead the shift toward operational efficiency by designing and deploying automation ecosystems: removing repetitive tasks and boosting lead acquisition.",
+      tags: ["n8n", "Agentic AI", "Automation"],
+    },
+    {
+      role: "Independent Trader",
+      company: "Financial markets",
+      period: "2018 – Present",
+      location: "Remote",
+      description:
+        "About 8 years trading financial markets with technical analysis, risk management and defined strategies. Discipline and data-driven decisions.",
+      tags: ["Technical analysis", "Risk management", "Futures"],
+    },
+    {
+      role: "Lead Developer",
+      company: "Pass Gallery",
+      period: "May 2023 – Apr 2026",
+      location: "Orlando, Florida · Remote",
+      description:
+        "Built the new version of the Pass Gallery site in Webflow: galleries, online store and marketing platform.",
+      tags: ["Webflow", "Web design", "Marketing"],
+    },
+    {
+      role: "Day Trader",
+      company: "UProfit",
+      period: "Oct 2024 – Mar 2026",
+      location: "United States · Remote",
+      description:
+        "Managed risk capital trading S&P 500 futures with a specific strategy and technical analysis of price manipulation.",
+      tags: ["S&P 500 futures", "Technical analysis", "Risk management"],
+    },
+    {
+      role: "Lead Developer",
+      company: "Felix Media",
+      period: "Aug 2023 – Jul 2024",
+      location: "United States · Remote",
+      description:
+        "Built the website and platform for Felix Media, an e-commerce marketing agency powered by AI.",
+      tags: ["Webflow", "Shopify", "E-commerce"],
+    },
+    {
+      role: "Product Manager Jr",
+      company: "Help",
+      period: "Oct 2022 – Nov 2023",
+      location: "Mexico · Remote",
+      description:
+        "Deployed the product on AWS (S3, Route 53, CloudFront) and developed the frontend as part of the technology team.",
+      tags: ["UI design", "AWS", "Frontend"],
+    },
+    {
+      role: "Data Analyst",
+      company: "OMD Colombia",
+      period: "Jun 2022 – Aug 2022",
+      location: "Bogotá, Colombia",
+      description:
+        "Weekly reporting unifying Facebook Ads, Google Ads, Campaign Manager and DV360, plus database cleanup for campaign analysis.",
+      tags: ["Excel", "Paid media", "Reporting"],
+    },
+    {
+      role: "Data Analyst Jr",
+      company: "Autolab",
+      period: "Sep 2021 – Mar 2022",
+      location: "Colombia",
+      description:
+        "Ran sprints, A/B tests to optimize WhatsApp remarketing conversion, and built Google Data Studio dashboards for several teams.",
+      tags: ["A/B testing", "Google Data Studio", "Sprints"],
+    },
   ],
   contact: {
     label: "Contact",
